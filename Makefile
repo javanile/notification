@@ -7,3 +7,9 @@ release:
 	git commit -am "fix"
 	git push
 
+## ====
+## Test
+## ====
+
+test-trigger-live:
+	@bash tests/bare/trigger-live-test.sh
