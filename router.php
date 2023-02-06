@@ -5,7 +5,7 @@
 // DON'T USE IN PRODUCTION, please code your own router or use a framework!
 
 chdir(__DIR__);
-$filePath = realpath('./src/'.ltrim($_SERVER['REQUEST_URI'], '/'));
+$filePath = realpath('./public/'.ltrim($_SERVER['REQUEST_URI'], '/'));
 if ($filePath && is_dir($filePath)){
     // attempt to find an index file
     foreach (['index.php', 'index.html'] as $indexFile) {
@@ -38,5 +38,5 @@ if ($filePath && is_file($filePath)) {
     }
 } else {
     // rewrite to our index file
-    include  'src' . DIRECTORY_SEPARATOR . 'index.html';
+    include  'public' . DIRECTORY_SEPARATOR . 'index.html';
 }
